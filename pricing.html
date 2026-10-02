@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>window.location.replace('/#/pricing');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — Stumari Digital Guest Experience</title>
+  <meta name="description" content="Simple, transparent pricing for vacation rentals, boutique stays, and property managers. No booking fees." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/global.css" />
+  <link rel="stylesheet" href="./css/marketing.css" />
+</head>
+<body>
+
+  <!-- Navbar (Screenshot #4) -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="./index.html" class="brand">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span>Stumari</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="./features.html">Features</a>
+        <a href="./properties.html">For Properties</a>
+        <a href="./pricing.html" class="active">Pricing</a>
+        <a href="./demo.html">Demo</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="./showcase.html" class="btn btn-ghost" style="color:var(--text-secondary); font-weight:600;">Showcase</a>
+        <a href="./host/dashboard.html" class="btn btn-ghost">Host Login</a>
+        <a href="./onboarding.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Pricing Content (Screenshot #4) -->
+  <main class="section">
+    <div class="container">
+      <div class="section-header" style="text-align: left; max-width: 760px; margin-bottom: var(--space-8);">
+        <h1 class="section-title" style="font-size: 2.85rem; line-height: 1.15;">
+          Simple, transparent pricing.
+        </h1>
+        <p class="section-description" style="font-size: 1.15rem;">
+          Choose the plan that fits your needs. Upgrade anytime.
+        </p>
+      </div>
+
+      <!-- Billing Cycle Toggle (Matches Screenshot #4) -->
+      <div style="margin-bottom: var(--space-10);">
+        <div class="pricing-interval-switch">
+          <button class="interval-btn" data-interval="monthly">Monthly</button>
+          <button class="interval-btn active" data-interval="yearly">
+            <span>Yearly</span>
+            <span class="save-pill">Save 20%</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 3 Tier Cards (Matches Screenshot #4) -->
+      <div class="pricing-grid">
+        
+        <!-- 1. Starter ($9/mo) -->
+        <div class="pricing-card">
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 700;">Starter</h3>
+            <div class="pricing-price">
+              <span id="price-starter">$9</span>
+              <span style="font-size: 0.9rem; font-weight: 500; color: var(--text-muted);" class="price-period">/month</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: var(--space-4);">For 1 property</p>
+
+            <ul class="pricing-features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Basic features</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> QR & NFC access</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 3 languages</li>
+            </ul>
+          </div>
+
+          <a href="./onboarding.html" class="btn btn-dark btn-full">Get Started</a>
+        </div>
+
+        <!-- 2. Starter / Pro ($19/mo - Most Popular in Emerald Background) -->
+        <div class="pricing-card pricing-card-popular">
+          <div class="popular-badge">Most Popular</div>
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: #ffffff;">Starter</h3>
+            <div class="pricing-price" style="color: #ffffff;">
+              <span id="price-pro">$19</span>
+              <span style="font-size: 0.9rem; font-weight: 500; color: rgba(255,255,255,0.8);" class="price-period">/month</span>
+            </div>
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.8); margin-bottom: var(--space-4);">For up to 10 properties</p>
+
+            <ul class="pricing-features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Everything in Starter</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Advanced guide builder</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Analytics & scans</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Priority support</li>
+            </ul>
+          </div>
+
+          <a href="./onboarding.html" class="btn btn-full" style="background:#ffffff; color:#127c56; font-weight:700;">Get Started</a>
+        </div>
+
+        <!-- 3. Business ($49/mo) -->
+        <div class="pricing-card">
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 700;">Business</h3>
+            <div class="pricing-price">
+              <span id="price-business">$49</span>
+              <span style="font-size: 0.9rem; font-weight: 500; color: var(--text-muted);" class="price-period">/month</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: var(--space-4);">For 50-100 properties</p>
+
+            <ul class="pricing-features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Everything in Pro</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Multi-property management</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Team access</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Custom support</li>
+            </ul>
+          </div>
+
+          <a href="./onboarding.html" class="btn btn-dark btn-full">Get Started</a>
+        </div>
+
+      </div>
+
+      <!-- Custom Plan Link (Screenshot #4) -->
+      <div style="text-align: center; margin-top: var(--space-12);">
+        <p style="font-size: 0.95rem; color: var(--text-secondary);">
+          Need a custom plan for your hotel or property management company?
+          <a href="#faq" style="color: var(--primary); font-weight: 700; text-decoration: none; margin-left: 4px;">Contact us &rarr;</a>
+        </p>
+      </div>
+
+      <!-- FAQ Section -->
+      <div id="faq" style="margin-top: var(--space-20);">
+        <div class="section-header">
+          <h2 class="section-title" style="font-size: 2rem;">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-item open">
+            <button class="faq-question">
+              <span>Do guests need to download an app?</span>
+              <span class="faq-icon">&darr;</span>
+            </button>
+            <div class="faq-answer">
+              Never. Guests simply point their phone camera at the QR code stand or tap an NFC sticker. The guide opens instantly in their browser with zero app store downloads or logins.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I update Wi-Fi passwords without reprinting QR codes?</span>
+              <span class="faq-icon">&darr;</span>
+            </button>
+            <div class="faq-answer">
+              Yes! Your QR code and NFC link are permanent. Whenever you change Wi-Fi credentials or house rules in your Stumari dashboard, it updates immediately for all future scans.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I use this for multiple properties?</span>
+              <span class="faq-icon">&darr;</span>
+            </button>
+            <div class="faq-answer">
+              Yes, our Starter Plus and Business plans allow you to organize, preview, and generate unique QR/NFC codes for all your properties from a single dashboard.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Exact Bottom Brand Banner from Reference Image -->
+  <div class="showcase-banner">
+    <div class="container showcase-banner-inner">
+      <a href="./index.html" class="brand brand-dark">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span style="color: #ffffff; font-size: 1.35rem;">Stumari</span>
+      </a>
+
+      <div class="showcase-banner-center">
+        <div class="showcase-banner-headline">Simple. Beautiful. Powerful.</div>
+        <div class="showcase-banner-sub">The digital guest experience for your property.</div>
+      </div>
+
+      <div class="showcase-banner-right">
+        <span class="showcase-banner-script">Better stays. Happier guests.</span>
+        <div class="showcase-mountain-icon">
+          <svg width="40" height="26" viewBox="0 0 42 28" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 26L16 6L25 18L32 10L40 26H2Z"/>
+            <path d="M12 12L16 6L20 12"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="brand brand-dark">
+          <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Stumari</span>
+        </div>
+
+        <div class="footer-links">
+          <a href="./features.html">Features</a>
+          <a href="./properties.html">For Properties</a>
+          <a href="./pricing.html">Pricing</a>
+          <a href="./demo.html">Demo</a>
+          <a href="./host/dashboard.html">Host Dashboard</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Stumari.app &bull; Everything your guest needs. In one place.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/global.js"></script>
+  <script src="./js/marketing.js"></script>
+</body>
+</html>

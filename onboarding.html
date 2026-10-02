@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>window.location.replace('/#/onboarding');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Your Guide — Stumari Onboarding</title>
+  <meta name="description" content="Set up your property guest guide in minutes." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/global.css" />
+  <link rel="stylesheet" href="./css/marketing.css" />
+  <style>
+    .onboarding-split {
+      display: grid;
+      grid-template-columns: 1fr;
+      min-height: 100vh;
+    }
+    @media (min-width: 900px) {
+      .onboarding-split {
+        grid-template-columns: 420px 1fr;
+      }
+    }
+    .onboarding-left {
+      background-color: #0f172a;
+      color: #ffffff;
+      padding: var(--space-8);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .onboarding-scenic-card {
+      margin-top: var(--space-8);
+      height: 380px;
+      border-radius: var(--radius-xl);
+      background: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80') center/cover;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: var(--space-6);
+    }
+    .onboarding-scenic-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, transparent 60%);
+    }
+    .onboarding-scenic-text {
+      position: relative;
+      z-index: 10;
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+    .onboarding-right {
+      background-color: #ffffff;
+      padding: var(--space-8) var(--space-6);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 620px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .step-dots-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      margin-bottom: var(--space-3);
+    }
+    .step-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: var(--radius-full);
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-fast);
+    }
+    .step-dot.active {
+      background-color: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+    .step-dot.completed {
+      background-color: #ecfdf5;
+      color: #10b981;
+      border-color: #10b981;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="onboarding-split">
+    
+    <!-- Left Hero Image Column (Matches Screenshot #6) -->
+    <div class="onboarding-left">
+      <a href="./index.html" class="brand brand-dark">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span>Stumari</span>
+      </a>
+
+      <div class="onboarding-scenic-card">
+        <div class="onboarding-scenic-text">
+          Let's create your<br />Stumari guide.
+        </div>
+      </div>
+
+      <div style="font-size: 0.8rem; color: #64748b; margin-top: var(--space-4);">
+        Zero downloads. Instant access for every guest.
+      </div>
+    </div>
+
+    <!-- Right Multi-Step Form (Matches Screenshot #6) -->
+    <div class="onboarding-right">
+      
+      <!-- Progress Bar (1 to 7) -->
+      <div>
+        <div class="step-dots-row">
+          <div class="step-dot active">1</div>
+          <div class="step-dot">2</div>
+          <div class="step-dot">3</div>
+          <div class="step-dot">4</div>
+          <div class="step-dot">5</div>
+          <div class="step-dot">6</div>
+          <div class="step-dot">7</div>
+        </div>
+        <span id="step-counter" style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted);">Step 1 of 7</span>
+      </div>
+
+      <!-- Step 1: Property (Screenshot #6) -->
+      <div class="onboarding-step-panel" id="step-1" style="margin-top: var(--space-6);">
+        <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: var(--space-2);">Tell us about your property</h2>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: var(--space-6);">This will appear at the top of your guest guide.</p>
+
+        <div class="form-group">
+          <label class="form-label">Property name</label>
+          <input type="text" id="onboard-name" class="form-control" value="Old Tbilisi Apartment" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Property type</label>
+          <select id="onboard-type" class="form-control">
+            <option value="apartment" selected>Apartment</option>
+            <option value="guesthouse">Guesthouse</option>
+            <option value="hotel">Boutique Hotel</option>
+            <option value="villa">Villa / Chalet</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Address</label>
+          <input type="text" id="onboard-address" class="form-control" value="14 Lado Asatiani Street, Tbilisi" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Number of guests</label>
+          <select id="onboard-guests" class="form-control">
+            <option value="2">2 guests</option>
+            <option value="4" selected>4 guests</option>
+            <option value="6">6 guests</option>
+            <option value="8">8+ guests</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Step 2: Arrival -->
+      <div class="onboarding-step-panel" id="step-2" style="display:none; margin-top: var(--space-6);">
+        <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: var(--space-2);">Arrival & Check-in</h2>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: var(--space-6);">Ensure seamless keyless access for your guests.</p>
+
+        <div class="form-group">
+          <label class="form-label">Check-in time</label>
+          <input type="text" class="form-control" value="3:00 PM" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Door keypad access code</label>
+          <input type="text" class="form-control" value="3829#" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Step-by-step entry instructions</label>
+          <textarea class="form-control">Push the heavy carved wooden gate, take the wrought-iron spiral staircase to the second floor, apartment 3 is the teal door.</textarea>
+        </div>
+      </div>
+
+      <!-- Step 3: Stay & Wi-Fi -->
+      <div class="onboarding-step-panel" id="step-3" style="display:none; margin-top: var(--space-6);">
+        <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: var(--space-2);">Wi-Fi & Comfort</h2>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: var(--space-6);">Guests can tap once to copy credentials.</p>
+
+        <div class="form-group">
+          <label class="form-label">Wi-Fi network (SSID)</label>
+          <input type="text" class="form-control" value="OldTbilisi_5G" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Wi-Fi password</label>
+          <input type="text" class="form-control" value="MadlobaGuest2026!" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">AC & heating guide</label>
+          <textarea class="form-control">Remote mounted in hallway. Mode button selects snowflake for Cool or sun for Heat.</textarea>
+        </div>
+      </div>
+
+      <!-- Step 4: Rules -->
+      <div class="onboarding-step-panel" id="step-4" style="display:none; margin-top: var(--space-6);">
+        <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: var(--space-2);">House Rules</h2>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: var(--space-6);">Clear expectations avoid misunderstandings.</p>
+
+        <div class="form-group">
+          <label class="form-label">Key rules (one per line)</label>
+          <textarea class="form-control" rows="4">No smoking indoors (balcony with ashtray is fine)
+Quiet hours from 11:00 PM to 8:00 AM
+Please remove shoes at the entryway</textarea>
+        </div>
+      </div>
+
+      <!-- Step 5: Explore -->
+      <div class="onboarding-step-panel" id="step-5" style="display:none; margin-top: var(--space-6);">
+        <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: var(--space-2);">Local Recommendations</h2>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: var(--space-6);">Recommend your favorite neighborhood dining and coffee.</p>
+
+        <div class="form-group">
+          <label class="form-label">Favorite café / breakfast</label>
+          <input type="text" class="form-control" value="Coffee LAB Sololaki — 2 min walk" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Top dinner spot</label>
+          <input type="text" class="form-control" value="Café Littera — Beautiful courtyard garden" />
+        </div>
+      </div>
+
+      <!-- Step 6: Contact -->
+      <div class="onboarding-step-panel" id="step-6" style="display:none; margin-top: var(--space-6);">
+        <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: var(--space-2);">Host Contact</h2>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: var(--space-6);">How guests can reach you in emergencies.</p>
+
+        <div class="form-group">
+          <label class="form-label">Host name</label>
+          <input type="text" class="form-control" value="Saba Beradze" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">WhatsApp number</label>
+          <input type="text" class="form-control" value="+995 555 123 456" />
+        </div>
+      </div>
+
+      <!-- Step 7: Preview & Confirmation -->
+      <div class="onboarding-step-panel" id="step-7" style="display:none; margin-top: var(--space-6);">
+        <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: var(--space-2);">Your Stumari is Ready!</h2>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: var(--space-6);">Click publish to generate your digital guide, permanent guest link, and QR code.</p>
+
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px; margin-bottom:20px;">
+          <div style="font-size:12px; text-transform:uppercase; color:#64748b; font-weight:700;">Summary</div>
+          <div style="font-size:16px; font-weight:800; margin-top:4px;">Old Tbilisi Apartment</div>
+          <div style="font-size:13px; color:#475569;">14 Lado Asatiani Street, Tbilisi &bull; 4 guests</div>
+          <div style="margin-top:10px; font-size:12px; color:#10b981; font-weight:600;">✓ Wi-Fi, Keypad code, and House Manual ready</div>
+        </div>
+      </div>
+
+      <!-- Bottom Nav Controls -->
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--border);">
+        <button id="onboarding-prev" class="btn btn-ghost" style="visibility: hidden;">&larr; Back</button>
+        <button id="onboarding-next" class="btn btn-primary btn-lg">Next <span>&rarr;</span></button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="./js/global.js"></script>
+  <script src="./js/marketing.js"></script>
+</body>
+</html>

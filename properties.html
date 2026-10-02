@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>window.location.replace('/#/for-properties');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Properties — Stumari for Every Stay</title>
+  <meta name="description" content="Stumari adapts to apartments, guesthouses, boutique hotels, villas, and property management portfolios." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/global.css" />
+  <link rel="stylesheet" href="./css/marketing.css" />
+</head>
+<body>
+
+  <!-- Navbar (Screenshot #3) -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="./index.html" class="brand">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span>Stumari</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="./features.html">Features</a>
+        <a href="./properties.html" class="active">For Properties</a>
+        <a href="./pricing.html">Pricing</a>
+        <a href="./demo.html">Demo</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="./showcase.html" class="btn btn-ghost" style="color:var(--text-secondary); font-weight:600;">Showcase</a>
+        <a href="./host/dashboard.html" class="btn btn-ghost">Host Login</a>
+        <a href="./onboarding.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Properties Section (Screenshot #3) -->
+  <main class="section">
+    <div class="container">
+      <div class="section-header" style="text-align: left; max-width: 760px;">
+        <h1 class="section-title" style="font-size: 2.85rem; line-height: 1.15;">
+          Stumari for every type of property.
+        </h1>
+        <p class="section-description" style="font-size: 1.15rem;">
+          From single apartments to large hotels, Stumari adapts to your needs.
+        </p>
+      </div>
+
+      <!-- Filter Tabs (Matches Screenshot #3) -->
+      <div class="property-filter-tabs" style="justify-content: flex-start;">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="apartments">Apartments</button>
+        <button class="filter-tab" data-filter="guesthouses">Guesthouses</button>
+        <button class="filter-tab" data-filter="hotels">Hotels</button>
+        <button class="filter-tab" data-filter="villas">Villas</button>
+        <button class="filter-tab" data-filter="managers">Property Managers</button>
+      </div>
+
+      <!-- Property Grid (Matches Screenshot #3) -->
+      <div class="properties-grid">
+        
+        <!-- 1. Apartments -->
+        <div class="property-type-card" data-category="apartments">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80" alt="Apartments" class="property-type-img" />
+          <div class="property-type-body">
+            <h3>Apartments</h3>
+            <p>Perfect for short-term and single units</p>
+          </div>
+        </div>
+
+        <!-- 2. Guesthouses -->
+        <div class="property-type-card" data-category="guesthouses">
+          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80" alt="Guesthouses" class="property-type-img" />
+          <div class="property-type-body">
+            <h3>Guesthouses</h3>
+            <p>Create a warm, local experience</p>
+          </div>
+        </div>
+
+        <!-- 3. Hotels -->
+        <div class="property-type-card" data-category="hotels">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Hotels" class="property-type-img" />
+          <div class="property-type-body">
+            <h3>Hotels</h3>
+            <p>Digital concierge for your guests</p>
+          </div>
+        </div>
+
+        <!-- 4. Villas -->
+        <div class="property-type-card" data-category="villas">
+          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" alt="Villas" class="property-type-img" />
+          <div class="property-type-body">
+            <h3>Villas</h3>
+            <p>Luxury and privacy</p>
+          </div>
+        </div>
+
+        <!-- 5. Property Managers -->
+        <div class="property-type-card" data-category="managers">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Property Managers" class="property-type-img" />
+          <div class="property-type-body">
+            <h3>Property Managers</h3>
+            <p>Manage multiple properties from one dashboard</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Exact Bottom Brand Banner from Reference Image -->
+  <div class="showcase-banner">
+    <div class="container showcase-banner-inner">
+      <a href="./index.html" class="brand brand-dark">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span style="color: #ffffff; font-size: 1.35rem;">Stumari</span>
+      </a>
+
+      <div class="showcase-banner-center">
+        <div class="showcase-banner-headline">Simple. Beautiful. Powerful.</div>
+        <div class="showcase-banner-sub">The digital guest experience for your property.</div>
+      </div>
+
+      <div class="showcase-banner-right">
+        <span class="showcase-banner-script">Better stays. Happier guests.</span>
+        <div class="showcase-mountain-icon">
+          <svg width="40" height="26" viewBox="0 0 42 28" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 26L16 6L25 18L32 10L40 26H2Z"/>
+            <path d="M12 12L16 6L20 12"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="brand brand-dark">
+          <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Stumari</span>
+        </div>
+
+        <div class="footer-links">
+          <a href="./features.html">Features</a>
+          <a href="./properties.html">For Properties</a>
+          <a href="./pricing.html">Pricing</a>
+          <a href="./demo.html">Demo</a>
+          <a href="./host/dashboard.html">Host Dashboard</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Stumari.app &bull; Everything your guest needs. In one place.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/global.js"></script>
+  <script src="./js/marketing.js"></script>
+</body>
+</html>

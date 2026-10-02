@@ -1,0 +1,556 @@
+/* ==========================================================================
+   Stumari Guest Experience Styles
+   Matches Screenshot 11 (Mobile Guest Experience)
+   Ultra-fast, zero-friction, mobile-first, no login required.
+   ========================================================================== */
+
+.guest-body {
+  background-color: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.guest-app-container {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: var(--shadow-xl);
+  padding-bottom: 90px; /* Space for bottom nav */
+}
+
+/* Guest Header */
+.guest-header {
+  height: 54px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-4);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.guest-header .brand {
+  font-size: 1.15rem;
+}
+
+/* Guest Hero Card */
+.guest-hero {
+  position: relative;
+  height: 230px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-5);
+  color: #ffffff;
+  margin: var(--space-3) var(--space-3) 0;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.guest-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.3) 60%, transparent 100%);
+}
+
+.guest-hero-content {
+  position: relative;
+  z-index: 10;
+}
+
+.guest-hero-location {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 0.75rem;
+  color: var(--accent-light);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.guest-hero h1 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.guest-hero-tagline {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+/* Quick Wi-Fi Banner */
+.wifi-quick-banner {
+  margin: var(--space-3);
+  padding: var(--space-4);
+  background-color: #0f172a;
+  color: #ffffff;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+}
+
+.wifi-quick-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.wifi-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wifi-quick-text {
+  font-size: 0.8rem;
+}
+
+.wifi-quick-text .wifi-ssid {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.wifi-quick-text .wifi-pass {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.btn-copy-wifi {
+  background-color: #10b981;
+  color: #ffffff;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+}
+
+/* Guest Cards Grid (Screenshot #11) */
+.guest-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  padding: 0 var(--space-3);
+}
+
+.guest-action-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-xs);
+  text-align: left;
+}
+
+.guest-action-card:hover,
+.guest-action-card:active {
+  border-color: #127c56;
+  background-color: #f8fafc;
+  transform: translateY(-1px);
+}
+
+.guest-action-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background-color: #e8f5f0;
+  color: #127c56;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guest-action-label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.guest-action-sub {
+  font-size: 0.725rem;
+  color: var(--text-muted);
+}
+
+/* Explore Screen / Recommendations List (Screenshot #11 right screen) */
+.explore-container {
+  padding: var(--space-4);
+}
+
+.explore-tabs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.explore-tab {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-subtle);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.explore-tab.active {
+  background-color: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+.rec-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.rec-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background-color: #ffffff;
+  box-shadow: var(--shadow-xs);
+}
+
+.rec-item-thumb {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.rec-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.rec-item-info h4 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.rec-item-info p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Persistent Bottom Navigation */
+.guest-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 480px;
+  height: 72px;
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 50;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.bottom-nav-item.active,
+.bottom-nav-item:hover {
+  color: var(--primary);
+}
+
+/* "Ask your host" Floating Button (Screenshot #11) */
+.ask-host-bar {
+  padding: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.btn-ask-host {
+  width: 100%;
+  background-color: #10b981;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.75rem;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-ask-host:hover {
+  background-color: #059669;
+}
+
+/* Details Modal */
+.guest-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.guest-modal.hidden {
+  display: none;
+}
+
+.guest-modal-sheet {
+  width: 100%;
+  max-width: 480px;
+  max-height: 80vh;
+  background-color: #ffffff;
+  border-radius: 24px 24px 0 0;
+  padding: var(--space-6);
+  overflow-y: auto;
+  box-shadow: var(--shadow-xl);
+  animation: slideUp 200ms ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.modal-sheet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--space-5);
+}
+
+.modal-sheet-header h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+/* ==========================================================================
+   Service Worker & Offline Status UX
+   Allows guests without cellular reception to know essential check-in data
+   is securely cached locally.
+   ========================================================================== */
+
+/* Offline Status Badge in Header */
+.offline-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 9999px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.offline-status-badge:hover {
+  background: #e2e8f0;
+  border-color: #94a3b8;
+}
+
+.offline-status-badge.offline-saved {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #065f46;
+}
+
+.offline-status-badge.is-offline {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #92400e;
+}
+
+.offline-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10b981;
+  display: inline-block;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.offline-status-badge.is-offline .offline-dot {
+  background-color: #f59e0b;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.25);
+  animation: pulseAmber 2s infinite ease-in-out;
+}
+
+@keyframes pulseAmber {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.25); opacity: 0.7; }
+}
+
+/* Offline Banner (Appears when offline or when reconnected) */
+.offline-banner {
+  display: none;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 10px 14px;
+  font-size: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  animation: slideDown 250ms ease forwards;
+  position: relative;
+  z-index: 35;
+}
+
+.offline-banner.active {
+  display: block;
+}
+
+.offline-banner.offline-warning {
+  background: linear-gradient(90deg, #b45309 0%, #d97706 100%);
+  color: #ffffff;
+}
+
+.offline-banner.online-recovered {
+  background: linear-gradient(90deg, #065f46 0%, #10b981 100%);
+  color: #ffffff;
+}
+
+.offline-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.offline-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.35;
+}
+
+.offline-banner-left svg {
+  flex-shrink: 0;
+}
+
+.offline-banner-title {
+  font-weight: 700;
+  display: block;
+}
+
+.offline-banner-desc {
+  font-size: 11px;
+  opacity: 0.92;
+}
+
+.offline-banner-close {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px 6px;
+  line-height: 1;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Offline Quick Access Card */
+.offline-quick-card {
+  margin: var(--space-3) var(--space-3) 0;
+  padding: 12px 14px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.offline-quick-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.offline-quick-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #e2e8f0;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.offline-quick-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.offline-quick-desc {
+  font-size: 11px;
+  color: #64748b;
+}
+

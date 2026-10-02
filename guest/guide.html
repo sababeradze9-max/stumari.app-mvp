@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>window.location.replace('/#/g/old-tbilisi-apartment');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Guest Guide — Stumari</title>
+  <meta name="theme-color" content="#127c56" />
+  <meta name="description" content="Digital guest welcome guidebook with offline check-in, Wi-Fi, and house manual access." />
+  <link rel="icon" type="image/svg+xml" href="../icon.svg" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/guest.css" />
+</head>
+<body class="guest-body">
+
+  <div class="guest-app-container">
+    
+    <!-- Guest Header (Screenshot #11) -->
+    <header class="guest-header">
+      <a href="../index.html" class="brand" style="font-size: 1.1rem;">
+        <svg class="brand-icon" style="width:22px; height:22px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Stumari</span>
+      </a>
+
+      <div style="display:flex; align-items:center; gap:8px;">
+        <!-- Offline Service Worker Status Pill -->
+        <button id="btn-offline-status" class="offline-status-badge offline-saved" title="Tap to check offline availability">
+          <span class="offline-dot"></span>
+          <span id="offline-badge-text">Offline Ready</span>
+        </button>
+
+        <button class="btn btn-secondary btn-sm" onclick="Stumari.copyToClipboard(window.location.href, 'Guide Link')" title="Share Guidebook">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+        </button>
+        <span style="font-size: 11px; font-weight: 700; background: #e2e8f0; padding: 2px 6px; border-radius: 4px;">EN</span>
+      </div>
+    </header>
+
+    <!-- Offline Notification Banner (Shown when cellular/Wi-Fi signal is lost) -->
+    <div id="offline-banner" class="offline-banner">
+      <div class="offline-banner-inner">
+        <div class="offline-banner-left">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="1" y1="1" x2="23" y2="23"/>
+            <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/>
+            <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/>
+            <path d="M10.71 5.05A16 16 0 0 1 22.58 9"/>
+            <path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/>
+            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+            <line x1="12" y1="20" x2="12.01" y2="20"/>
+          </svg>
+          <div>
+            <span class="offline-banner-title" id="offline-banner-title">No Cellular Reception — Offline Mode</span>
+            <span class="offline-banner-desc" id="offline-banner-desc">Door lock code, Wi-Fi password & house guide remain fully accessible.</span>
+          </div>
+        </div>
+        <button class="offline-banner-close" id="offline-banner-close" aria-label="Dismiss">&times;</button>
+      </div>
+    </div>
+
+    <!-- VIEW 1: HOME (Screenshot #11 Left Screen) -->
+    <div id="guest-home-view">
+      
+      <!-- Welcome Hero Card (Screenshot #11) -->
+      <div class="guest-hero" id="guest-hero">
+        <div class="guest-hero-content">
+          <div class="guest-hero-location">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span id="guest-location">Tbilisi, Georgia</span>
+          </div>
+          <h1 id="guest-title">Welcome to Old Tbilisi Apartment</h1>
+          <p class="guest-hero-tagline" id="guest-tagline">19th-Century Heritage Residence with Historic Balcony</p>
+        </div>
+      </div>
+
+      <!-- Quick Wi-Fi Banner (Screenshot #11) -->
+      <div class="wifi-quick-banner">
+        <div class="wifi-quick-info">
+          <div class="wifi-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" x2="12.01" y1="20" y2="20"/></svg>
+          </div>
+          <div class="wifi-quick-text">
+            <div class="wifi-ssid" id="guest-wifi-ssid">OldTbilisi_5G</div>
+            <div class="wifi-pass" id="guest-wifi-pass">MadlobaGuest2026!</div>
+          </div>
+        </div>
+
+        <button class="btn-copy-wifi" id="guest-copy-wifi">Copy</button>
+      </div>
+
+      <!-- 8 Action Cards Grid (Screenshot #11) -->
+      <div class="guest-cards-grid">
+        
+        <!-- 1. Check-in -->
+        <div class="guest-action-card" data-type="checkin">
+          <div class="guest-action-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 2l-2 2m-1.5 1.5L8 15V19h4l9.5-9.5z"/><path d="M16 5l3 3"/></svg>
+          </div>
+          <div>
+            <div class="guest-action-label">Check-in</div>
+            <div class="guest-action-sub">Arrival & key code</div>
+          </div>
+        </div>
+
+        <!-- 2. Wi-Fi -->
+        <div class="guest-action-card" data-type="wifi">
+          <div class="guest-action-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" x2="12.01" y1="20" y2="20"/></svg>
+          </div>
+          <div>
+            <div class="guest-action-label">Wi-Fi</div>
+            <div class="guest-action-sub">Network & details</div>
+          </div>
+        </div>
+
+        <!-- 3. How Things Work -->
+        <div class="guest-action-card" data-type="howitworks">
+          <div class="guest-action-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <div>
+            <div class="guest-action-label">How Things Work</div>
+            <div class="guest-action-sub">AC & appliances</div>
+          </div>
+        </div>
+
+        <!-- 4. House Rules -->
+        <div class="guest-action-card" data-type="rules">
+          <div class="guest-action-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+          </div>
+          <div>
+            <div class="guest-action-label">House Rules</div>
+            <div class="guest-action-sub">Quiet hours & policy</div>
+          </div>
+        </div>
+
+        <!-- 5. Explore -->
+        <div class="guest-action-card" data-type="explore">
+          <div class="guest-action-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          </div>
+          <div>
+            <div class="guest-action-label">Explore</div>
+            <div class="guest-action-sub">Local dining & spots</div>
+          </div>
+        </div>
+
+        <!-- 6. Transport -->
+        <div class="guest-action-card" data-type="transport">
+          <div class="guest-action-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+          </div>
+          <div>
+            <div class="guest-action-label">Transport</div>
+            <div class="guest-action-sub">Bolt, metro & taxi</div>
+          </div>
+        </div>
+
+        <!-- 7. Check-out -->
+        <div class="guest-action-card" data-type="checkout">
+          <div class="guest-action-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+          </div>
+          <div>
+            <div class="guest-action-label">Check-out</div>
+            <div class="guest-action-sub">Time & key return</div>
+          </div>
+        </div>
+
+        <!-- 8. Contact -->
+        <div class="guest-action-card" data-type="contact">
+          <div class="guest-action-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="guest-action-label">Contact</div>
+            <div class="guest-action-sub">Call or WhatsApp</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Prominent "Ask your host" Floating Button (Screenshot #11) -->
+      <div class="ask-host-bar">
+        <button class="btn-ask-host" id="btn-ask-host">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>Ask your host</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- VIEW 2: EXPLORE (Screenshot #11 Right Screen) -->
+    <div id="guest-explore-view" style="display: none;" class="explore-container">
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
+        <button class="btn btn-ghost btn-sm" onclick="switchGuestView('home')">&larr; Back</button>
+        <h2 style="font-size:1.25rem; font-weight:800;">Explore Nearby</h2>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="explore-tabs">
+        <button class="explore-tab active" data-category="all">All</button>
+        <button class="explore-tab" data-category="Restaurants">Restaurants</button>
+        <button class="explore-tab" data-category="Cafés">Cafés</button>
+        <button class="explore-tab" data-category="Attractions">Attractions</button>
+      </div>
+
+      <!-- Recommendations List -->
+      <div class="rec-list" id="rec-list-container">
+        <!-- Rendered by js/guest.js -->
+      </div>
+
+      <div style="margin-top: 24px; text-align: center;">
+        <button class="btn btn-secondary btn-full" onclick="switchGuestView('home')">Back to home</button>
+      </div>
+    </div>
+
+    <!-- Persistent Bottom Navigation (Screenshot #11) -->
+    <nav class="guest-bottom-nav">
+      <button class="bottom-nav-item active" data-nav="home">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Home</span>
+      </button>
+
+      <button class="bottom-nav-item" data-nav="explore">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+        <span>Explore</span>
+      </button>
+
+      <button class="bottom-nav-item" data-nav="help">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+        <span>Help</span>
+      </button>
+
+      <button class="bottom-nav-item" data-nav="contact">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Contact</span>
+      </button>
+    </nav>
+
+    <!-- Details Modal Sheet -->
+    <div id="guest-modal" class="guest-modal hidden">
+      <div class="guest-modal-sheet">
+        <div class="modal-sheet-header">
+          <h3 id="modal-title">Details</h3>
+          <button id="modal-close" style="font-size: 20px; font-weight: bold; color: var(--text-muted);">&times;</button>
+        </div>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../js/global.js"></script>
+  <script src="../js/guest.js"></script>
+</body>
+</html>

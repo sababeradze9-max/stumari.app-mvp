@@ -1,0 +1,9 @@
+{
+  "name": "Stumari",
+  "description": "Modern SaaS platform for short-term rental hosts to generate digital guest welcome guidebooks with instant QR codes and mobile-first guides.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
+

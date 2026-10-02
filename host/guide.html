@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guide Builder — Stumari Host</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/host.css" />
+</head>
+<body>
+
+  <div class="host-layout">
+    
+    <!-- Sidebar -->
+    <aside class="host-sidebar">
+      <div>
+        <div class="sidebar-header">
+          <a href="../index.html" class="brand brand-dark">
+            <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            <span>Stumari</span>
+          </a>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="./dashboard.html" class="sidebar-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+            <span>Dashboard</span>
+          </a>
+          <a href="./properties.html" class="sidebar-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span>Properties</span>
+          </a>
+          <a href="./guide.html" class="sidebar-link active">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+            <span>Guide Builder</span>
+          </a>
+          <a href="./qr-nfc.html" class="sidebar-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h.01"/><path d="M17 7h.01"/><path d="M7 17h.01"/><path d="M17 17h.01"/></svg>
+            <span>QR & NFC</span>
+          </a>
+          <a href="./settings.html" class="sidebar-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            <span>Settings</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Saba" class="user-avatar" />
+        <div class="user-info">
+          <div class="user-name">Saba Beradze</div>
+          <div class="user-role">Host & Superhost</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="host-main">
+      <header class="host-header">
+        <div class="property-selector" onclick="window.location.href='./properties.html'">
+          <span>🏢</span>
+          <span>Old Tbilisi Apartment</span>
+          <span style="font-size: 10px; color: var(--text-muted);">&blacktriangledown;</span>
+        </div>
+
+        <div style="display: flex; gap: var(--space-2);">
+          <a href="./preview.html" class="btn btn-secondary btn-sm">Preview</a>
+          <button id="save-guide-btn" class="btn btn-primary btn-sm">Save changes</button>
+        </div>
+      </header>
+
+      <main class="host-content">
+        
+        <!-- Two-column Guide Builder Grid (Screenshot #8) -->
+        <div class="guide-builder-grid">
+          
+          <!-- Left Sections List (Screenshot #8) -->
+          <div class="guide-sections-list">
+            <button class="guide-section-btn" data-section="welcome">
+              <span>Welcome</span>
+              <span class="check-icon">&#10003;</span>
+            </button>
+            <button class="guide-section-btn" data-section="checkin">
+              <span>Check-in</span>
+              <span class="check-icon">&#10003;</span>
+            </button>
+            <button class="guide-section-btn active" data-section="wifi">
+              <span>Wi-Fi</span>
+              <span class="check-icon">&#10003;</span>
+            </button>
+            <button class="guide-section-btn" data-section="howthingswork">
+              <span>How Things Work</span>
+              <span class="check-icon">&#10003;</span>
+            </button>
+            <button class="guide-section-btn" data-section="houserules">
+              <span>House Rules</span>
+              <span class="check-icon">&#10003;</span>
+            </button>
+            <button class="guide-section-btn" data-section="recommendations">
+              <span>Recommendations</span>
+              <span class="check-icon">&#10003;</span>
+            </button>
+            <button class="guide-section-btn" data-section="transport">
+              <span>Transport</span>
+              <span class="check-icon">&#10003;</span>
+            </button>
+            <button class="guide-section-btn" data-section="checkout">
+              <span>Check-out</span>
+              <span class="check-icon">&#10003;</span>
+            </button>
+            <button class="guide-section-btn" data-section="contact">
+              <span>Contact</span>
+              <span class="check-icon">&#10003;</span>
+            </button>
+            <button class="guide-section-btn" data-section="emergency">
+              <span>Emergency</span>
+              <span class="check-icon">&#10003;</span>
+            </button>
+          </div>
+
+          <!-- Right Editor Card (Screenshot #8: Wi-Fi Section Active) -->
+          <div class="guide-editor-card">
+            
+            <!-- Wi-Fi Panel (Matches Screenshot #8 exactly) -->
+            <div class="editor-section-panel" id="section-wifi" style="display: block;">
+              <div class="editor-header">
+                <h3>Wi-Fi</h3>
+                <p>Help your guests connect easily.</p>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Network name</label>
+                <input type="text" id="guide-wifi-network" class="form-control" value="OldTbilisi_5G" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Password</label>
+                <input type="text" id="guide-wifi-password" class="form-control" value="MadlobaGuest2026!" />
+              </div>
+
+              <!-- Cozy Apartment Interior Photo Placeholder (Screenshot #8) -->
+              <div style="margin: var(--space-6) 0;">
+                <label class="form-label">Photo or Router Location</label>
+                <div style="height: 180px; border-radius: var(--radius-lg); overflow: hidden; position: relative;">
+                  <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80" style="width: 100%; height: 100%; object-fit: cover;" alt="Wi-Fi Router Area" />
+                </div>
+              </div>
+
+              <div style="display: flex; justify-content: flex-end; margin-top: var(--space-6);">
+                <button class="btn btn-primary" onclick="document.getElementById('save-guide-btn').click()">Save changes</button>
+              </div>
+            </div>
+
+            <!-- Check-in Panel -->
+            <div class="editor-section-panel" id="section-checkin" style="display: none;">
+              <div class="editor-header">
+                <h3>Check-in & Arrival</h3>
+                <p>Arrival times and keypad access.</p>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Check-in time</label>
+                <input type="text" id="guide-checkin-time" class="form-control" value="3:00 PM" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Front door keypad code</label>
+                <input type="text" id="guide-door-code" class="form-control" value="3829#" />
+              </div>
+            </div>
+
+            <!-- Welcome Panel -->
+            <div class="editor-section-panel" id="section-welcome" style="display: none;">
+              <div class="editor-header">
+                <h3>Welcome & Greeting</h3>
+                <p>First message guests see upon opening their guide.</p>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Guide Title</label>
+                <input type="text" class="form-control" value="Welcome to Old Tbilisi!" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Greeting message</label>
+                <textarea class="form-control">Gamarjoba! Welcome to your bohemian refuge above the cobbled streets of Old Tbilisi.</textarea>
+              </div>
+            </div>
+
+            <!-- Other panels -->
+            <div class="editor-section-panel" id="section-howthingswork" style="display: none;">
+              <div class="editor-header">
+                <h3>How Things Work</h3>
+                <p>Appliances, heating, AC, and hot water.</p>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">Daikin AC, Espresso Machine, and Bosch Washer/Dryer are configured.</p>
+            </div>
+
+            <div class="editor-section-panel" id="section-houserules" style="display: none;">
+              <div class="editor-header">
+                <h3>House Rules</h3>
+                <p>Quiet hours, smoking, and balcony care.</p>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">4 core rules published.</p>
+            </div>
+
+            <div class="editor-section-panel" id="section-recommendations" style="display: none;">
+              <div class="editor-header">
+                <h3>Recommendations</h3>
+                <p>Favorite cafes, restaurants, and attractions in Sololaki.</p>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">5 places curated with maps navigation.</p>
+            </div>
+
+            <div class="editor-section-panel" id="section-transport" style="display: none;">
+              <div class="editor-header"><h3>Transport</h3></div>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">Bolt and airport taxi info saved.</p>
+            </div>
+
+            <div class="editor-section-panel" id="section-checkout" style="display: none;">
+              <div class="editor-header"><h3>Check-out</h3></div>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">11:00 AM check-out steps configured.</p>
+            </div>
+
+            <div class="editor-section-panel" id="section-contact" style="display: none;">
+              <div class="editor-header"><h3>Contact</h3></div>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">WhatsApp & emergency contacts active.</p>
+            </div>
+
+            <div class="editor-section-panel" id="section-emergency" style="display: none;">
+              <div class="editor-header"><h3>Emergency</h3></div>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">112 emergency services and nearest pharmacy set.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <script src="../js/global.js"></script>
+  <script src="../js/host.js"></script>
+</body>
+</html>

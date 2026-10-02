@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>window.location.replace('/#/demo');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo — Experience Stumari Live</title>
+  <meta name="description" content="Experience what your guests will see with the interactive Stumari digital guest guide demo." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/global.css" />
+  <link rel="stylesheet" href="./css/marketing.css" />
+  <link rel="stylesheet" href="./css/guest.css" />
+</head>
+<body style="background-color: #0f172a; color: #ffffff;">
+
+  <!-- Navbar (Screenshot #5 dark variant) -->
+  <header class="navbar navbar-dark">
+    <div class="container navbar-inner">
+      <a href="./index.html" class="brand brand-dark">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span>Stumari</span>
+      </a>
+
+      <nav class="nav-links nav-links-dark">
+        <a href="./features.html">Features</a>
+        <a href="./properties.html">For Properties</a>
+        <a href="./pricing.html">Pricing</a>
+        <a href="./demo.html" class="active" style="color:#ffffff;">Demo</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="./showcase.html" class="btn btn-ghost" style="color:#cbd5e1; font-weight:600;">Showcase</a>
+        <a href="./host/dashboard.html" class="btn btn-ghost" style="color:#cbd5e1;">Host Login</a>
+        <a href="./onboarding.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Demo Interactive Area (Matches Screenshot #5) -->
+  <main class="section" style="padding-top: var(--space-12);">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left Side Copy (Screenshot #5) -->
+        <div>
+          <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.15; margin-bottom: var(--space-4);">
+            Try Stumari<br />for yourself.
+          </h1>
+          <p style="font-size: 1.15rem; color: #94a3b8; max-width: 440px; margin-bottom: var(--space-8); line-height: 1.6;">
+            Experience what your guests will see &mdash; no account needed.
+          </p>
+
+          <div style="display: flex; gap: var(--space-4); margin-bottom: var(--space-10);">
+            <a href="./guest/guide.html" class="btn btn-primary btn-lg" style="padding: 12px 28px; font-size: 1.05rem;">Start Demo</a>
+            <a href="./showcase.html" class="btn btn-dark btn-lg">Showcase View</a>
+          </div>
+
+          <!-- Trust Badges (Screenshot #5 - 4 Translucent Capsule Tags) -->
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; border-top: 1px solid #1e293b; padding-top: var(--space-6);">
+            <span style="display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:9999px; padding:6px 14px; font-size:0.8rem; color:#cbd5e1;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Real experience
+            </span>
+            <span style="display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:9999px; padding:6px 14px; font-size:0.8rem; color:#cbd5e1;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              No sign up
+            </span>
+            <span style="display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:9999px; padding:6px 14px; font-size:0.8rem; color:#cbd5e1;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Mobile first
+            </span>
+            <span style="display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:9999px; padding:6px 14px; font-size:0.8rem; color:#cbd5e1;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Instant load
+            </span>
+          </div>
+        </div>
+
+        <!-- Right Side Live Embedded Guest Phone (Matches Screenshot #5) -->
+        <div class="phone-mockup-wrapper">
+          <div class="phone-mockup" style="height: 680px; width: 340px;">
+            <iframe 
+              src="./guest/guide.html?slug=old-tbilisi-apartment" 
+              style="width: 100%; height: 100%; border: none; border-radius: 34px; background: #fff;"
+              title="Interactive Guest Guide Demo"
+            ></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Exact Bottom Brand Banner from Reference Image -->
+  <div class="showcase-banner">
+    <div class="container showcase-banner-inner">
+      <a href="./index.html" class="brand brand-dark">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span style="color: #ffffff; font-size: 1.35rem;">Stumari</span>
+      </a>
+
+      <div class="showcase-banner-center">
+        <div class="showcase-banner-headline">Simple. Beautiful. Powerful.</div>
+        <div class="showcase-banner-sub">The digital guest experience for your property.</div>
+      </div>
+
+      <div class="showcase-banner-right">
+        <span class="showcase-banner-script">Better stays. Happier guests.</span>
+        <div class="showcase-mountain-icon">
+          <svg width="40" height="26" viewBox="0 0 42 28" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 26L16 6L25 18L32 10L40 26H2Z"/>
+            <path d="M12 12L16 6L20 12"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-bottom">
+        <div>&copy; 2026 Stumari.app &bull; Everything your guest needs. In one place.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/global.js"></script>
+  <script src="./js/marketing.js"></script>
+</body>
+</html>

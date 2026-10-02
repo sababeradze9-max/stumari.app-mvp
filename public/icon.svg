@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7F2" />
+      <stop offset="100%" stop-color="#EFE7DE" />
+    </linearGradient>
+  </defs>
+  <!-- Background with rounded corners -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  <rect x="12" y="12" width="488" height="488" rx="116" fill="none" stroke="#E3D7C8" stroke-width="8" opacity="0.6" />
+  
+  <!-- Stumari Arch Portal Motif -->
+  <g transform="translate(106, 68) scale(12.5)" stroke="#111827" fill="none" stroke-linecap="square" stroke-linejoin="round">
+    <!-- Outer Arch -->
+    <path d="M3 27V12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12V27" stroke-width="2.75" />
+    <!-- Inner Arch (closed at bottom) -->
+    <path d="M8 27V13C8 10.7909 9.79086 9 12 9C14.2091 9 16 10.7909 16 13V27H8Z" stroke-width="2.25" />
+  </g>
+</svg>

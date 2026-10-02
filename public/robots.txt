@@ -1,0 +1,17 @@
+# Robots.txt for Stumari
+User-agent: *
+Allow: /
+Allow: /#pricing
+Allow: /#features
+Allow: /#faq
+Allow: /terms
+Allow: /privacy
+
+# Disallow private host SaaS dashboard & admin panels
+Disallow: /app/
+Disallow: /admin/
+
+# Disallow indexing sensitive guest guidebook tokens/slugs
+Disallow: /g/
+
+Sitemap: https://stumari.stay/sitemap.xml
